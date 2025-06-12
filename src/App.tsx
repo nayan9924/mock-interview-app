@@ -1,7 +1,18 @@
+import { BrowserRouter as Router , Routes , Route } from "react-router-dom";
+import PublicLayout  from "./layouts/public-layout";
+
 
 const App = () => {
   return (
-    <div className='text-blue-500'>App</div>
+    <Router>
+      <Routes>
+        {/*public routes*/}
+        <Route element={<PublicLayout />}>
+        
+        </Route>
+        {/*protected routes*/}
+      </Routes>
+    </Router>
   )
 };
 
