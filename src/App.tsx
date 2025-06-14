@@ -2,6 +2,8 @@ import { BrowserRouter as Router , Routes , Route } from "react-router-dom";
 
 import PublicLayout  from "@/layouts/public-layout";
 import AuthenticationLayout from "@/layouts/auth-layout";
+import ProtectedRoutes from "@/layouts/protected-routes";
+import MainLayout from "@/layouts/main-layout";
 
 import HomePage from "@/routes/home";
 import SignInPage from "@/routes/sign-in";
@@ -23,6 +25,13 @@ const App = () => {
         </Route>
 
         {/*protected routes*/}
+        <Route element={
+          <ProtectedRoutes>
+          <MainLayout />
+          </ProtectedRoutes>}>
+          {/*Add all the protected routes*/}
+
+        </Route>
       </Routes>
     </Router>
   )
