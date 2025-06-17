@@ -20,7 +20,7 @@ const Header = () => {
           <LogoContainer />
 
           {/* navigation section */}
-          <nav className="hidden md:flex items-center gap-3">
+          <nav className="hidden md:flex items-center gap-6">
             <NavigationRoutes />
             {userId && (
               <NavLink to={"/generate"} className={({isActive}) => cn("text-base text-neutral-600" , isActive && "text-neutral-900 font-semibold")}>Take an Interview</NavLink>
